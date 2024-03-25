@@ -71,7 +71,7 @@ function getDayName(date) {
  * Date('2024-02-16T00:00:00Z') => Date('2024-02-23T00:00:00Z')
  */
 function getNextFriday(date) {
-  const weekDay = date.getDay();
+  const weekDay = date.getUTCDay();
   let nextDays;
   if (weekDay !== 5) {
     nextDays = (7 + 5 - weekDay) % 7;
